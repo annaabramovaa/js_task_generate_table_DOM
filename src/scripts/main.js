@@ -367,30 +367,30 @@ for (const person of people) {
 
   const genderCell = document.createElement('td');
 
-  genderCell.textContent = person.gender;
+  genderCell.textContent = person.sex;
   row.appendChild(genderCell);
 
   const birthCell = document.createElement('td');
 
-  birthCell.textContent = person.birth;
+  birthCell.textContent = person.born;
   row.appendChild(birthCell);
 
   const deathCell = document.createElement('td');
 
-  deathCell.textContent = person.death;
+  deathCell.textContent = person.dead;
   row.appendChild(deathCell);
 
   const ageCell = document.createElement('td');
 
-  ageCell.textContent = person.death - person.birth;
+  ageCell.textContent = person.dead - person.born;
   row.appendChild(ageCell);
 
   const centuryCell = document.createElement('td');
 
-  centuryCell.textContent = Math.ceil(person.death / 100);
+  centuryCell.textContent = Math.ceil(person.dead / 100);
   row.appendChild(centuryCell);
 
-  const table = document.querySelector('dashboard');
+  const table = document.querySelector('.dashboard');
 
   table.appendChild(row);
 }
