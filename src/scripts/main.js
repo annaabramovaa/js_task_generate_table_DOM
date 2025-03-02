@@ -357,4 +357,40 @@ const people = [
 // eslint-disable-next-line no-console
 console.log(people); // you can remove it
 
-// write your code here
+for (const person of people) {
+  const row = document.createElement('tr');
+
+  const nameCell = document.createElement('td');
+
+  nameCell.textContent = person.name;
+  row.appendChild(nameCell);
+
+  const genderCell = document.createElement('td');
+
+  genderCell.textContent = person.gender;
+  row.appendChild(genderCell);
+
+  const birthCell = document.createElement('td');
+
+  birthCell.textContent = person.birth;
+  row.appendChild(birthCell);
+
+  const deathCell = document.createElement('td');
+
+  deathCell.textContent = person.death;
+  row.appendChild(deathCell);
+
+  const ageCell = document.createElement('td');
+
+  ageCell.textContent = person.death - person.birth;
+  row.appendChild(ageCell);
+
+  const centuryCell = document.createElement('td');
+
+  centuryCell.textContent = Math.ceil(person.death / 100);
+  row.appendChild(centuryCell);
+
+  const table = document.querySelector('dashboard');
+
+  table.appendChild(row);
+}
